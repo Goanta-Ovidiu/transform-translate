@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.box {
+  border: 5px solid gray;
+  width: 50vmin;
+  height: 50vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.box > * {
+  background-color: lightslategray;
+}
+.box1 {
+  background-image: url(https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?cs=srgb&dl=pexels-lumn-167699.jpg&fm=jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.box2 {
+  background-image: url(https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?cs=srgb&dl=pexels-pixabay-235621.jpg&fm=jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.box1 .title {
+  text-align: center;
+  background-color: white;
+  transform: translateX(0%);
+  transition: transform 0.5s;
+}
+.box1:hover .title {
+  transform: translateX(-110%);
+  opacity: 1;
+}
+
+.box1 .text {
+  height: 4rem;
+  transform: translateX(110%);
+  transition: transform 0.5s;
+}
+
+.box1:hover .text {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.box2 .title {
+  text-align: center;
+  background-color: white;
+  transform: translateY(0);
+  transition: transform 0.5s;
+}
+.box2:hover .title {
+  transform: translateY(-20px);
+}
+.box2 .text {
+  height: 4rem;
+  transform: translateY(4rem);
+  transition: transform 0.5s;
+}
+.box2:hover .text {
+  transform: translateY(0);
+}
